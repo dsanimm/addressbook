@@ -19,6 +19,9 @@ public class AddContactArray {
 		System.out.println("Record Changed");
 		
 		}
-	
+	public void deleteContact(String firstName) {
+		arr.remove(firstName);
+		System.out.println("Contact deleted");
+	}
 
 }

@@ -14,7 +14,7 @@ public class AddBookSys {
 		AddContactArray add = new AddContactArray();
 
 		while(choice!=4) {
-			System.out.println("Enter your choice:\n1. Enter contact\n2. Edit Contact\n3. Exit");
+			System.out.println("Enter your choice:\n1. Enter contact\n2. Edit Contact\n3. Delete Contact\n4. Exit");
 
 			choice = sc.nextInt();
 
@@ -57,8 +57,17 @@ public class AddBookSys {
 				
 				
 				break;
-			
 			case 3:
+				System.out.println("Enter First Name:");
+				firstName = sc.next();
+
+				if(add.containsKey(firstName)) {
+					add.deleteContact(firstName);
+				}
+				else
+					System.out.println("Record not found");
+				break;
+			case 4:
 				break;
 			default: System.out.println("Wrong choice");
 				
